@@ -17,10 +17,10 @@ use App\Http\Controllers\Api\ProductController;
 |
 */
 
-Route::post('/register', [RegisterController::class, 'register']);
-Route::post('/login', [RegisterController::class, 'login']);
+// Route::post('/register', [RegisterController::class, 'register']);
+// Route::post('/login', [RegisterController::class, 'login']);
 
-Route::middleware('auth:api')->group(function(){
+Route::prefix('')->group(function(){
     Route::resource('products', ProductController::class);
 });
 
